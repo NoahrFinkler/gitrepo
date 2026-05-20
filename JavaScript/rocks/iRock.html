@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>iROCK</title>
+    <link type="text/css" rel="stylesheet" href="stone.css" />
+    <script>
+        function touchStein() {
+            //var Username = prompt("Wie lautet dein Name?");
+            if (Username) {
+                //alert('Username ist: ' + Username);
+                if (on == 0) {
+                    document.getElementById("SadStein").src = "rocks/smile sad.png"
+                    on = 1;
+                } else {
+                    document.getElementById("SadStein").src = "rocks/smile happy.png"
+                    on = 0;
+                }
+            }
+    </script>
+
+</head>
+
+<body onload="alert('hier kommt Stein')">
+    <div style="margin-top:100px;text-align: center;">
+        <img id="SadStein" src="rocks/smile sad.png" alt="smile sad" onclick="touchStein()">
+    </div>
+
+
+
+</body>
+
+</html>

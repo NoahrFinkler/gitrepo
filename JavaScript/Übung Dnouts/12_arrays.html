@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        function ausgabe(wert) {
+            let ausgabe = document.getElementById("output");
+            ausgabe.innerHTML += wert + "<br>";
+        }
+
+        var schüler = ["Joudi", "Tobias", "Luis", "Luis", "Melih", "Noah", "Tobias", "Sebastian", "Marcel", "Jaron", "Florian"];
+        for (let i = 0; i < schüler.length; i++) {
+            ausgabe(schüler[i]);
+
+        }
+
+        sort = schüler.sort();
+        for (let i2 = 0; i2 < sort.length; i2++) {
+            ausgabe(sort[i2]);
+        }
+
+        reverse = schüler.reverse();
+        for (let i3 = 0; i3 < reverse.length; i3++) {
+            ausgabe(reverse[i3]);
+        }
+
+    </script>
+</body>
+
+</html>

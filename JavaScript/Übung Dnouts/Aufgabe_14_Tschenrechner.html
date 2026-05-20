@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aufgabe</title>
+</head>
+ 
+<body>
+    <h1>Liste verwalten</h1>
+    <input type="number" id="eingabe" placeholder="Wert einfügen...">
+    <label for="Zeichen"></label>
+    <select name="Zeichen" id="Zeichen">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button onclick="berechnen()">Berechnen</button>
+    <div id="liste"></div><br>
+ 
+ 
+ 
+    <script>
+        let werte = [];
+        let summe = 0;
+ 
+        function berechnen() {
+            let eingabeWert = parseFloat(document.getElementById("eingabe").value);
+            let operator = document.getElementById("Zeichen").value;
+            switch (operator) {
+                case "+":
+                    summe += eingabeWert;
+                    break;
+                case "-":
+                    summe -= eingabeWert;
+                    break;
+                case "*":
+                    summe *= eingabeWert;
+                    break;
+                case "/":
+                    if (eingabeWert !== 0) {
+                        alert("Division durch Null ist nicht erlaubt!");
+                        return;
+                    }
+                    summe /= eingabeWert;
+                    break;
+            }
+ 
+            werte.push(operator);
+            werte.push(eingabeWert);
+            werte.push(" = " + summe);
+            listeAktualisieren();
+        }
+ 
+        function listeAktualisieren() {
+            document.getElementById("liste").innerHTML = "";
+            for (let i = 0; i < werte.length; i++)
+                document.getElementById("liste").innerHTML += "<p>" + werte[i] + "<br>";
+            console.log(werte[i]);
+        }
+ 
+    </script>
+ 
+</body>
+ 
+</html>

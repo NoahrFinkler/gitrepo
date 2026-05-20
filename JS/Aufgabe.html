@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="ausgabe"></div>
+    <script>
+        let ausgabe = document.getElementById("ausgabe");
+
+        ausgabe.innerHTML += "<br>Ausgabe";
+        let mstr = "Hallo Welt";
+        // Anzahl der zeichen im string 
+        ausgabe.innerHTML += "<br> Laenge von " + mstr + " = " + mstr.length;
+        // Hole mir ein zeichen von der position x
+        ausgabe.innerHTML += "<br> Zeichen von Position " + mstr + " = " + mstr.charAt(0);
+        // wie viele l sind im string?
+        let suchstring = "l";
+        let gefundenezahl = 0;
+        for (let x = 0; x < mstr.length; x++) {
+            if (mstr.charAt(x) === suchstring) {
+                gefundenezahl++;
+            }
+        }
+        ausgabe.innerHTML += "<br>" + suchstring + "gefunden in " + mstr + "Anzahl=" + gefunden;
+
+        // Suche nach text in text 
+        ausgabe.innerHTML += "<br> An Welcher Position:" + mstr.indexOf(suchstring);
+        // verbinde string
+        ausgabe.innerHTML += "<br>" + mstr.concat(" xx yy zz ").concat("xx yy"); concat("aa");
+        // replace ersetzen
+        ausgabe.innerHTML += "<br>" + mstr.replace("ello", "ello kitty");
+        //wörter zählen in einem string
+        let woerterarray = mstr.split(" ");
+        ausgabe.innerHTML += mstr.split(" ");
+        for (let i = 0; i < woerterarray.length; i++) {
+            zeichenanzahl = woerterarray[i].length;
+            ausgabe.innerHTML += "<br>" + woerterarray[i] + " " + woerterarray[i].length;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

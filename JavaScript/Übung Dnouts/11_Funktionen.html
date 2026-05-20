@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>funcitones</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+        function subrtaction(a, b) {
+            return a - b;
+        }
+        function division(a, b) {
+            return a / b;
+        }
+        function multiplitation(a, b) {
+            return a * b;
+        }
+
+        function ausgabe(wert, outputNumber) {
+            console.log(wert);
+            if (outputNumber === 1) {
+                let ausgabe = document.getElementById("output");
+                ausgabe.innerHTML += wert;
+            } else if (outputNumber === 2) {
+                let ausgabe = document.getElementById("output");
+                ausgabe.innerHTML += wert;
+            }
+
+
+        }
+
+        ausgabe(add(4, 5), 1);
+        ausgabe("<br>", 1);
+        ausgabe(subrtaction(4, 5), 2);
+        ausgabe("<br>", 1);
+        ausgabe(division(4, 5), 2);
+        ausgabe("<br>", 2);
+        ausgabe(multiplitation(4, 5), 1);
+        ausgabe("<br>", 2);
+    </script>
+</body>
+
+</html> 
