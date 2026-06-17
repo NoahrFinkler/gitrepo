@@ -60,3 +60,99 @@ h1 {
     gap: 25px;
     margin: 40px 0;
 }
+
+.choice-btn {
+    background: linear-gradient(145deg, #4361ee, #3a0ca3);
+    border: none;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.7);
+}
+
+.choice-btn i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.result {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+#round-result {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    min-height: 60px;
+    color: #ffd166;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selections {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.selections span {
+    color: #06d6a0;
+    font-weight: bold;
+}
+
+#reset-btn {
+    background: linear-gradient(145deg, #f72585, #b5179e);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#reset-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(247, 37, 133, 0.5);
+}
+
+/* Animation für Gewinn/Verlust */
+@keyframes pulseWin {
+    0% {
+        color: #ffd166;
+    }
+
+    50% {
+        color: #06d6a0;
+    }
+
+    100% {
+        color: #ffd166;
+    }
+}
+
+.win {
+    animation: pulseWin 0.8s infinite;
+}
